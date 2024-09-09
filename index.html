@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Веб-чат</title>
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>Веб-чат</h1>
+            <button id="logout-button" style="display: none;">Выйти</button>
+        </header>
+        <main id="login-area">
+            <div class="form-container">
+                <h2>Вход</h2>
+                <input type="text" id="username-input" placeholder="Введите имя пользователя" />
+                <button id="login-button">Войти</button> 
+                <h2>Регистрация</h2>
+                <input type="text" id="register-username" placeholder="Имя пользователя" />
+                <input type="file" id="avatar-input" accept="image/*" />
+                <button id="register-button">Зарегистрироваться</button>
+                <div id="registration-error" class="error-message"></div>
+            </div>
+        </main>
+        <main id="chat-area" style="display: none;">
+            <div id="user-list"></div>
+            <input type="text" id="search-user" placeholder="Поиск пользователя..." />
+            <div id="filtered-users"></div>
+            <div id="messages"></div>
+            <footer>
+                <input type="text" id="message-input" placeholder="Введите сообщение..." />
+                <button id="send-button">Отправить</button>
+                <button id="record-button">Записать голос</button>
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
